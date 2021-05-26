@@ -1,1 +1,1 @@
-web: gunicorn hello-world/hello:app --log-file -
+web: gunicorn --pythonpath hello-world/hello:app --log-file -
