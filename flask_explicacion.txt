@@ -40,3 +40,5 @@ To install new packages, use “conda install [package name]” or “pip instal
 
 
 *** Test the app in your computer
+
+----
