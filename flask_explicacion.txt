@@ -1,0 +1,42 @@
+https://hidenobu-tokuda.com/how-to-build-a-hello-world-web-application-using-flask-and-deploy-it-to-heroku/#toc_id_5
+
+Flask is a web framework for python. Using Flask, you can easily build a web application with several features 
+such as “login to individual user pages”, “following other users”, etc.
+
+After developing a web application, you need to deploy it to a web server to operate the service. For this purpose, 
+Heroku is one of the best cloud platforms because it automatically installs all of the required softwares and packages, 
+including python and Flask.
+
+The structure is:
+
+/hello-world
+    ├── hello.py
+    ├── .flaskenv
+    ├── requirements.txt 
+    ├── Procfile
+    └── .gitignore
+
+
+* hello.py: a body of the “Hello World” application. 
+* .flaskenv: this file sets environment variables for Flask. In this article, it sets the environment variable FLASK_APP, 
+  which is required by flask run command for a local test. 
+* requirements.txt: a text file which specifies python packages that will be used by the application. 
+  Heroku automatically installs the packages described in this file. 
+* Procfile: this file specifies commands that will be executed on startup in Heroku. 
+* .gitignore: this file specifies files that will not be deployed to Heroku. 
+
+***** CREATE CONDA environment
+
+Virtual environment enables you to create the same environment in your computer and in Heroku, so that you can test your app in your computer in the same environment with Heroku.
+
+conda create -n [environment name] python
+conda env list
+activate [environment name]
+
+*******  Install Packages in the Created Virtual Environment
+
+To install new packages, use “conda install [package name]” or “pip install [package name]” in CMD.
+
+
+
+*** Test the app in your computer
